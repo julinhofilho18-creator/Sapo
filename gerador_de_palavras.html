@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras Aleatórias</title>
+    <style>
+        body {
+            background: #171717;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 20px 20px;
+        }
+        h1 { color: #00ff99; }
+        #palavra {
+            font-size: 35px;
+            margin: 40px 0;
+            color: yellow;
+        }
+        button {
+            background: #00cc77;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover { background: #00ff99; }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Palavras</h1>
+    <p id="palavra">???</p>
+    <button onclick="gerarPalavra()">Nova palavra</button>
+
+    <script>
+        const palavras = [
+            "Abacaxi", "Computador", "Dinossauro", "Chocolate",
+            "Banana", "Astronauta", "Caracol", "Elefante",
+            "Galáxia", "Pipoca", "Minecraft", "Cachorro",
+            "Melancia", "Geladeira", "Foguete"
+        ];
+
+        function gerarPalavra() {
+            const numero = Math.floor(Math.random() * palavras.length);
+            document.getElementById("palavra").textContent = palavras[numero];
+        }
+    </script>
+</body>
+</html>
